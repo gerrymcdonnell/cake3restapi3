@@ -14,16 +14,35 @@ class WordsController extends AppController
 {
 
     /**
+	notes $this->set('_serialize', 'words');	
+	is import as its what is sent in the json output
+	**/
+	
+	/**
      * Index method
      *
      * @return \Cake\Http\Response|void
      */
-    public function index()
+	 
+	 //cake baked output
+    /*public function index()
     {
         $words = $this->paginate($this->Words);
 
         $this->set(compact('words'));
+    }*/
+	
+	
+	//with serialize key
+	public function index()
+    {
+        $words = $this->paginate($this->Words);
+
+        $this->set(compact('words'));
+        $this->set('_serialize', 'words');
     }
+	
+	
 
     /**
      * View method
@@ -39,6 +58,7 @@ class WordsController extends AppController
         ]);
 
         $this->set('word', $word);
+		$this->set('_serialize', 'word');
     }
 
     /**
@@ -52,13 +72,13 @@ class WordsController extends AppController
         if ($this->request->is('post')) {
             $word = $this->Words->patchEntity($word, $this->request->getData());
             if ($this->Words->save($word)) {
-                $this->Flash->success(__('The word has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+                /*$this->Flash->success(__('The word has been saved.'));
+                return $this->redirect(['action' => 'index']);*/
             }
-            $this->Flash->error(__('The word could not be saved. Please, try again.'));
+            //$this->Flash->error(__('The word could not be saved. Please, try again.'));
         }
         $this->set(compact('word'));
+		$this->set('_serialize', 'word');
     }
 
     /**
@@ -76,13 +96,13 @@ class WordsController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $word = $this->Words->patchEntity($word, $this->request->getData());
             if ($this->Words->save($word)) {
-                $this->Flash->success(__('The word has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+                /*$this->Flash->success(__('The word has been saved.'));
+                return $this->redirect(['action' => 'index']);*/
             }
-            $this->Flash->error(__('The word could not be saved. Please, try again.'));
+            //$this->Flash->error(__('The word could not be saved. Please, try again.'));
         }
         $this->set(compact('word'));
+		$this->set('_serialize', 'word');
     }
 
     /**
@@ -97,11 +117,17 @@ class WordsController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $word = $this->Words->get($id);
         if ($this->Words->delete($word)) {
-            $this->Flash->success(__('The word has been deleted.'));
+            //$this->Flash->success(__('The word has been deleted.'));
+			$message = 'Success: Word Deleted';
         } else {
-            $this->Flash->error(__('The word could not be deleted. Please, try again.'));
+            //$this->Flash->error(__('The word could not be deleted. Please, try again.'));
+			$message = 'Error:';
         }
 
-        return $this->redirect(['action' => 'index']);
+        //return $this->redirect(['action' => 'index']);
+		$this->set([
+            'message' => $message,
+            '_serialize' => ['message']
+        ]);
     }
 }

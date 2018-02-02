@@ -28,7 +28,7 @@ use Cake\Event\Event;
 class AppController extends Controller
 {
 	
-	use \Crud\Controller\ControllerTrait;
+	//use \Crud\Controller\ControllerTrait;
    
 	
 	/**
@@ -48,7 +48,7 @@ class AppController extends Controller
         $this->loadComponent('Flash');
 		
 		//crud
-		$this->loadComponent('Crud.Crud', [
+		/*$this->loadComponent('Crud.Crud', [
             'actions' => [
                 'Crud.Index',
                 'Crud.Add',
@@ -56,7 +56,7 @@ class AppController extends Controller
                 'Crud.View',
                 'Crud.Delete'
             ]
-        ]);
+        ]);*/
 
         /*
          * Enable the following components for recommended CakePHP security settings.
@@ -74,7 +74,10 @@ class AppController extends Controller
      * @return void
      */
 	 
-	//missing in latest cake 3 version??
+	 
+	 
+	 
+	//missing in latest cake 3 version?? -not needed
     /*public function beforeRender(Event $event)
     {
         if (!array_key_exists('_serialize', $this->viewVars) &&
