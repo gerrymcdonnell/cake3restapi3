@@ -33,10 +33,21 @@ class WordsController extends AppController
     }*/
 	
 	
+	public $paginate = [
+        'limit' => 25,
+        'order' => [
+            'Words.modified' => 'desc'
+        ]
+    ];
+	
+	
 	//with serialize key
 	public function index()
     {
-        $words = $this->paginate($this->Words);
+        
+		$words = $this->paginate($this->Words);
+		
+		//$recipes = $this->Recipes->find('all');
 
         $this->set(compact('words'));
         $this->set('_serialize', 'words');
@@ -53,9 +64,7 @@ class WordsController extends AppController
      */
     public function view($id = null)
     {
-        $word = $this->Words->get($id, [
-            'contain' => []
-        ]);
+        $word = $this->Words->get($id);
 
         $this->set('word', $word);
 		$this->set('_serialize', 'word');
