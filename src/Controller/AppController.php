@@ -75,14 +75,14 @@ class AppController extends Controller
      */
 	 
 	//missing in latest cake 3 version??
-    public function beforeRender(Event $event)
+    /*public function beforeRender(Event $event)
     {
         if (!array_key_exists('_serialize', $this->viewVars) &&
             in_array($this->response->type(), ['application/json', 'application/xml'])
         ) {
             $this->set('_serialize', true);
         }
-    }
+    }*/
 	
 	
 	

@@ -48,8 +48,8 @@ class WordsFixture extends TestFixture
             'picture' => 'Lorem ipsum dolor sit amet',
             'picture_dir' => 'Lorem ipsum dolor sit amet',
             'soundfile' => 'Lorem ipsum dolor sit amet',
-            'created' => '2018-02-01 21:11:10',
-            'modified' => '2018-02-01 21:11:10'
+            'created' => '2018-02-02 02:45:46',
+            'modified' => '2018-02-02 02:45:46'
         ],
     ];
 }
