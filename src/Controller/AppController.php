@@ -28,6 +28,7 @@ use Cake\Event\Event;
 class AppController extends Controller
 {
 	
+	//for crud plugin
 	//use \Crud\Controller\ControllerTrait;
    
 	
@@ -77,15 +78,7 @@ class AppController extends Controller
 	 
 	 
 	 
-	//missing in latest cake 3 version?? -not needed
-    /*public function beforeRender(Event $event)
-    {
-        if (!array_key_exists('_serialize', $this->viewVars) &&
-            in_array($this->response->type(), ['application/json', 'application/xml'])
-        ) {
-            $this->set('_serialize', true);
-        }
-    }*/
+
 	
 	
 	

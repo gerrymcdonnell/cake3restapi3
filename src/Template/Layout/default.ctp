@@ -47,6 +47,15 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </ul>
         </div>
     </nav>
+	
+	<?php
+		
+		/*echo $this->Html->script('https://code.jquery.com/jquery-1.12.4.min.js');
+		
+		echo $this->element('Gerrymcdonnell/Pushy.newpushymenu',['pushymenutitle'=>'Pushy Menu']);	*/	
+		
+	?>
+	
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
         <?= $this->fetch('content') ?>

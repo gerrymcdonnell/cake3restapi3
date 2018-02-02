@@ -225,6 +225,6 @@ if (Configure::read('debug')) {
 Plugin::load('Cors', ['bootstrap' => true, 'routes' => false]);
 
 //CRUD
-Plugin::load('Crud');
 
-Plugin::load('Crud');
+
+//Plugin::load('Gerrymcdonnell/Changelog', ['bootstrap' => true, 'routes' => true]);
