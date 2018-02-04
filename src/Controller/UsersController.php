@@ -12,8 +12,15 @@ use App\Controller\AppController;
  */
 class UsersController extends AppController
 {
-
-    /**
+	
+	public $paginate = [
+        'order' => [
+            'modified' => 'desc'
+        ]
+    ];
+    
+	
+	/**
      * Index method
      *
      * @return \Cake\Http\Response|void
