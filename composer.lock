@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9bdcd8052a27be89f9645343efbb1810",
+    "content-hash": "842109d533798e15b4b085d392fd7adc",
     "packages": [
         {
             "name": "aura/intl",
@@ -363,6 +363,45 @@
                 "update"
             ],
             "time": "2018-01-31T13:04:28+00:00"
+        },
+        {
+            "name": "gerrymcdonnell/changelog",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gerrymcdonnell/cakephp-changelog.git",
+                "reference": "bbff3bd98ad1fe9559a7da6cfe23a59a65d64955"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gerrymcdonnell/cakephp-changelog/zipball/bbff3bd98ad1fe9559a7da6cfe23a59a65d64955",
+                "reference": "bbff3bd98ad1fe9559a7da6cfe23a59a65d64955",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": ">=3.3.2 <4.0.0",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Gerrymcdonnell\\Changelog\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Document current tasks within your project and prioritise them.",
+            "homepage": "http://www.irishbloke.net/?tag=changelogs",
+            "keywords": [
+                "cakephp",
+                "changelog",
+                "log",
+                "logging",
+                "plugin"
+            ],
+            "time": "2017-11-29T16:22:19+00:00"
         },
         {
             "name": "josegonzalez/dotenv",
@@ -2709,6 +2748,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "gerrymcdonnell/changelog": 20,
         "psy/psysh": 0
     },
     "prefer-stable": true,

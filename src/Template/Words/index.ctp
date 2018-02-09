@@ -7,7 +7,14 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
+
         <li><?= $this->Html->link(__('New Word'), ['action' => 'add']) ?></li>
+
+        <li><?= $this->Html->link(__('Word REST json'), ['action' => 'index.json']) ?></li>
+
+        <li><?= $this->Html->link(__('user REST json'), ['controller'=>'users','action' => 'index.json']) ?></li>
+
+        <li><?= $this->Html->link(__('changelogs'), ['controller'=>'changelogs','plugin'=>'gerrymcdonnell/changelog']) ?></li>
     </ul>
 </nav>
 <div class="words index large-9 medium-8 columns content">

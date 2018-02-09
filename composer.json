@@ -38,6 +38,7 @@
         "sort-packages": true
     },
     "require": {
+        "Gerrymcdonnell/Changelog": "dev-master",
         "cakephp/cakephp": "~3.5.11",
         "cakephp/migrations": "^1.0",
         "cakephp/plugin-installer": "^1.0",
